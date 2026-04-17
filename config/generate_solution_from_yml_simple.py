@@ -252,7 +252,7 @@ def main():
     config = load_config(
         os.getenv('CONFIG_FILE', 'config/v01/v01-template.yml'))
 
-    print("=== AUTHENTICATING ===")
+    print("=== AUTHENTICATING ===",flush=True)
     auth()
 
     azure_config = config['azure']
@@ -261,14 +261,14 @@ def main():
     security_groups = azure_config.get('security_groups', {})
     git_config = config.get('github', {})
 
-    print("\n=== CREATING CAPACITIES ===")
+    print("\n=== CREATING CAPACITIES ===",flush=True)
     for capacity_config in config.get('capacities', []):
         resource_group = capacity_config.get(
             'resource_group', capacity_defaults.get('resource_group'))
         create_capacity(capacity_config, subscription_id,
                         resource_group, capacity_defaults)
 
-    print("\n=== CREATING WORKSPACES ===")
+    print("\n=== CREATING WORKSPACES ===",flush=True)
     github_connection_id = None
 
     for workspace_config in config.get('workspaces', []):
@@ -288,7 +288,7 @@ def main():
                                          workspace_config['connect_to_git_folder'],
                                          git_config, github_connection_id)
 
-    print("\n=== SUSPENDING CAPACITIES ===")
+    print("\n=== SUSPENDING CAPACITIES ===",flush=True)
     time.sleep(20)
     for capacity_config in config.get('capacities', []):
         resource_group = capacity_config.get(
@@ -296,7 +296,7 @@ def main():
         suspend_capacity(capacity_config['name'],
                          subscription_id, resource_group)
 
-    print("\n✓ Done")
+    print("\n✓ Done",flush=True)
 
 
 if __name__ == "__main__":
