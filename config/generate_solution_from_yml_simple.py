@@ -56,8 +56,20 @@ def load_config(config_file_path):
 
 def auth():
     """Authenticate with Azure using service principal credentials."""
-    run_command([get_fabric_cli_path(), 'auth', 'login', '-u', os.getenv('SPN_CLIENT_ID'),
-                '-p', os.getenv('SPN_CLIENT_SECRET'), '--tenant', os.getenv('AZURE_TENANT_ID')])
+    print("Starting Fabric CLI login...", flush=True)
+    response = run_command([
+        get_fabric_cli_path(),
+        'auth', 'login',
+        '-u', os.getenv('SPN_CLIENT_ID'),
+        '-p', os.getenv('SPN_CLIENT_SECRET'),
+        '--tenant', os.getenv('AZURE_TENANT_ID')
+    ])
+    print("Fabric CLI login completed.", flush=True)
+    print(f"Auth return code: {response.returncode}", flush=True)
+    if response.stdout:
+        print(f"Auth stdout: {response.stdout}", flush=True)
+    if response.stderr:
+        print(f"Auth stderr: {response.stderr}", flush=True)
 
 
 def capacity_exists(capacity_name, subscription_id, resource_group):
