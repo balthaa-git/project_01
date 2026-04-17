@@ -1,13 +1,13 @@
-name: Starter GitHub Actions Workflow
+name: Deploy Fabric Solution from Template
 
 on:
   workflow_dispatch:
     inputs:
-      solution_version:
-        description: "Solution version (e.g., av01, av02, av03)"
-        required: true
+      config_file:
+        description: "Path to configuration template file"
+        required: false
         type: string
-        default: "av01"
+        default: "config/v01/v01-template.yml"
 
 jobs:
   deploy-fabric-infrastructure:
@@ -16,13 +16,22 @@ jobs:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Install pip & Fabric CLI
         run: |
-            python -m pip install --upgrade pip
-            pip install ms-fabric-cli==1.2.0
-
-      - name: Authenticate
+          python -m pip install --upgrade pip
+          pip install -r config/requirements.txt
+      - name: Run solution generator
         run: |
-            fab auth login -u ${{secrets.SPN_CLIENT_ID}} -p ${{secrets.SPN_CLIENT_SECRET}} --tenant ${{secrets.AZURE_TENANT_ID}}
+          python config/generate_solution_from_yml_simple.py
+        shell: bash
+        working-directory: ${{ github.workspace }}
+        env:
+          CONFIG_FILE: ${{ github.event.inputs.config_file }}
+          SPN_CLIENT_ID: ${{ secrets.SPN_CLIENT_ID }}
+          SPN_CLIENT_SECRET: ${{ secrets.SPN_CLIENT_SECRET }}
+          SPN_OBJECT_ID: ${{ secrets.SPN_OBJECT_ID }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          GITHUB_PAT: ${{ secrets.GH_PAT }}
