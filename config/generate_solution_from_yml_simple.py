@@ -238,7 +238,7 @@ def main():
         load_dotenv(Path(__file__).parent.parent / '.env')
 
     config = load_config(
-        os.getenv('CONFIG_FILE', 'config/templates/v01/v01-template.yml'))
+        os.getenv('CONFIG_FILE', 'config/v01/v01-template.yml'))
 
     print("=== AUTHENTICATING ===")
     auth()
