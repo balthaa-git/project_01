@@ -20,13 +20,13 @@ azure:
   # Default settings for all Fabric capacities, saves us having to right them out each time
   capacity_defaults:
     resource_group: "rg-av01" # Azure Resource Group for all capacities
-    region: "uksouth"
+    region: "centralus"
     sku: "F2"
     capacity_admins: "${SPN_OBJECT_ID}" # Capacity administrators loaded from environment variable (comma-separated Object IDs)
 
 github:
-  organization: "UnifiedEducation"
-  repository: "fabric-solution-adv"
+  organization: "balthaa-git"
+  repository: "project_01"
   branch: "main"
   provider: "GitHub"
 
@@ -54,7 +54,7 @@ workspaces:
         role: "Admin"
     connect_to_git_folder: "solution/datastores/"
   - name: "{{SOLUTION_VERSION}}-dev-consumption"
-    capacity: "fc{{SOLUTION_VERSION}}devengineering"
+    capacity: "fc{{SOLUTION_VERSION}}devconsumption"
     permissions:
       - group: "SG_AV_Engineers"
         role: "Admin"
