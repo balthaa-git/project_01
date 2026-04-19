@@ -17,7 +17,13 @@ def get_fabric_cli_path():
 
 def run_command(cmd):
     """Execute a subprocess command and return the result."""
-    return subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', errors='replace')
+    return subprocess.run(
+        cmd,
+        capture_output=True,
+        text=True,
+        encoding='utf-8',
+        errors='replace'
+    )
 
 
 def call_azure_api(endpoint, method='get', body=None):
