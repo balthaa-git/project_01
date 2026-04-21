@@ -2,7 +2,7 @@
 Create feature workspaces for development branches.
 
 This script is designed to be called from GitHub Actions workflow_dispatch.
-It creates workspaces for a feature branch and connects them to Git.
+It creates workspaces for a feature branch and connects them to Git.this is just to test
 """
 
 # fmt: off
