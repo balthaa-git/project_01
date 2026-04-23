@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "Notebook",
-    "displayName": "nb-av01-lhcreate-bronze"
+    "type": "SQLDatabase",
+    "displayName": "fs-av01-admin"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "abb57e3d-9039-af41-45d7-114affc4380b"
+    "logicalId": "912e8031-3092-aaee-4d35-7fff3dbe0c70"
   }
 }

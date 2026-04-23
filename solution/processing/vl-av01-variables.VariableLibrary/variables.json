@@ -5,7 +5,7 @@
       "name": "LH_WORKSPACE_NAME",
       "note": "",
       "type": "String",
-      "value": "av01-feature-sprint5-lakehouse-datastores"
+      "value": "av01-feature-sprint6-metadata-framework-datastores"
     },
     {
       "name": "BRONZE_LH_NAME",
@@ -24,6 +24,18 @@
       "note": "",
       "type": "String",
       "value": "lh_av01_gold"
+    },
+    {
+      "name": "METADATA_SERVER",
+      "note": "",
+      "type": "String",
+      "value": "enmtb3lb6bguxgove6pbtrwxiu-lrm7yreg3qhepeje4k5yzycsdy"
+    },
+    {
+      "name": "METADATA_DB",
+      "note": "",
+      "type": "String",
+      "value": "fs-av01-admin-3dbe0c70-7fff-4d35-aaee-3092912e8031"
     }
   ]
 }

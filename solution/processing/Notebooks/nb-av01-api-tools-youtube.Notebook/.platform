@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
     "type": "Notebook",
-    "displayName": "nb-av01-lhcreate-gold"
+    "displayName": "nb-av01-api-tools-youtube"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "11817a6e-7565-8010-44ee-0b3d2bb1229b"
+    "logicalId": "491facc0-0e19-9c86-474c-acda479f9d6f"
   }
 }
