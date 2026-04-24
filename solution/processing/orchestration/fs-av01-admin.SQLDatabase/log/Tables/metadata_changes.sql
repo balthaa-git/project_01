@@ -13,3 +13,9 @@ CREATE TABLE [log].[metadata_changes] (
 
 GO
 
+CREATE NONCLUSTERED INDEX [IX_metadata_changes_table]
+    ON [log].[metadata_changes]([table_name] ASC, [changed_at] ASC);
+
+
+GO
+

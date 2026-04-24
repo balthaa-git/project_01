@@ -17,3 +17,9 @@ CREATE TABLE [log].[validation_results] (
 
 GO
 
+CREATE NONCLUSTERED INDEX [IX_validation_results_run]
+    ON [log].[validation_results]([run_id] ASC);
+
+
+GO
+

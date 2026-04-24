@@ -16,3 +16,9 @@ CREATE TABLE [log].[pipeline_runs] (
 
 GO
 
+CREATE NONCLUSTERED INDEX [IX_pipeline_runs_status]
+    ON [log].[pipeline_runs]([status] ASC, [started_at] ASC);
+
+
+GO
+

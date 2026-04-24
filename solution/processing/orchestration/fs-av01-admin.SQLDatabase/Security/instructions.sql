@@ -1,5 +1,5 @@
 CREATE SCHEMA [instructions]
-    AUTHORIZATION [reddy@balthayeruvaoutlook130.onmicrosoft.com];
+    AUTHORIZATION [william@fabric.courses];
 
 
 GO
