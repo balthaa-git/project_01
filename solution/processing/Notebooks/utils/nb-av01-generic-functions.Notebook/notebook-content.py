@@ -8,8 +8,8 @@
 # META   },
 # META   "dependencies": {
 # META     "environment": {
-# META       "environmentId": "7a92863e-0806-8243-4a9e-3a7e3a72728b",
-# META       "workspaceId": "00000000-0000-0000-0000-000000000000"
+# META       "environmentId": "96c50632-ad20-43a9-9795-46941fb11235",
+# META       "workspaceId": "de2236af-7220-4dfb-a72a-3073ae552292"
 # META     }
 # META   }
 # META }
@@ -135,6 +135,13 @@ def get_api_key_from_keyvault(key_vault_url: str, secret_name: str) -> str:
 # **Logging Functions**
 # 
 # Function names must match `metadata.log_store.function_name`.
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # CELL ********************
 
@@ -292,6 +299,13 @@ def log_validation(spark, validation_result, target_table: str = None,
 # META   "language_group": "jupyter_python"
 # META }
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # **Loading Functions**
@@ -385,6 +399,13 @@ def load_json_to_delta(spark, source_path: str, target_path: str,
 # META {
 # META   "language": "python",
 # META   "language_group": "jupyter_python"
+# META }
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
 # META }
 
 # MARKDOWN ********************
@@ -577,6 +598,13 @@ def lookup_join(df, lookup_table: str, source_key: str,
 # META   "language_group": "jupyter_python"
 # META }
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 def get_transform_function(function_name: str):
@@ -667,6 +695,13 @@ def merge_to_delta(spark, source_df, target_path: str, merge_condition: str,
 # META }
 
 # CELL ********************
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # METADATA ********************
 
@@ -781,6 +816,13 @@ def run_validations(context, df, validation_rows: list, expectation_lookup: dict
 # META {
 # META   "language": "python",
 # META   "language_group": "jupyter_python"
+# META }
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
 # META }
 
 # MARKDOWN ********************

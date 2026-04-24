@@ -5,7 +5,24 @@
 # META {
 # META   "kernel_info": {
 # META     "name": "synapse_pyspark"
+# META   },
+# META   "dependencies": {
+# META     "environment": {
+# META       "environmentId": "96c50632-ad20-43a9-9795-46941fb11235",
+# META       "workspaceId": "de2236af-7220-4dfb-a72a-3073ae552292"
+# META     }
 # META   }
+# META }
+
+# CELL ********************
+
+%run nb-av01-generic-functions
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
 # META }
 
 # CELL ********************
@@ -43,7 +60,7 @@
 
 # CELL ********************
 
-%run nb-av01-generic-functions
+
 
 # METADATA ********************
 
@@ -129,8 +146,8 @@ source_store_schema = StructType([
 
 source_store_data = [
     (1, "youtube_api", "rest_api", "api_key",
-     "https://av01-akv-restapi-keys.vault.azure.net/",
-     "data-v3-api-key",
+     "https://fabric-int-kv.vault.azure.net/",
+     "youtube-api-key",
      "https://www.googleapis.com/youtube/v3",
      "YouTube Data API v3 - Channel stats, videos, playlists",
      None, None)  # Let SQL DEFAULT handle these

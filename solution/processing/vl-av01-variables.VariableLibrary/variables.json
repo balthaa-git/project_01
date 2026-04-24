@@ -5,7 +5,7 @@
       "name": "LH_WORKSPACE_NAME",
       "note": "",
       "type": "String",
-      "value": "av01-feature-sprint6-metadata-framework-datastores"
+      "value": "av01-feature-baltha-processing"
     },
     {
       "name": "BRONZE_LH_NAME",
@@ -29,13 +29,13 @@
       "name": "METADATA_SERVER",
       "note": "",
       "type": "String",
-      "value": "enmtb3lb6bguxgove6pbtrwxiu-lrm7yreg3qhepeje4k5yzycsdy"
+      "value": "enmtb3lb6bguxgove6pbtrwxiu-qc6c5nds7cxe5ghdmwbuhtxztu"
     },
     {
       "name": "METADATA_DB",
       "note": "",
       "type": "String",
-      "value": "fs-av01-admin-3dbe0c70-7fff-4d35-aaee-3092912e8031"
+      "value": "fs-av01-admin-c887098b-d7df-4ffa-964b-2709f1efcd4e"
     }
   ]
 }
